@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html  lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -52,7 +53,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Tobiasz Sobolewski</h1>
-            <h2>Junior GameDeveloper</h2>
+            <h2>Junior ASP.NET Developer</h2>
         </div>
         <!-- End #lead-content -->
 
@@ -75,7 +76,7 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                       Since I was a child I have had interest in technology and IT. Of course I also played some games. They were the most fun to me, so I wanted to work with them. I learned thing or two, but I know there is still much to learn, for me this is not only a challenge but also new possibilites :) I'm looking for new areas to learn and I'm hoping to work with like-minded people.
+                       Since I was a child I have had interest in technology and IT. Why .NET? I tried my luck with games, I learned a thing or two, but I decided to try something else, more suited to my preferences. For me this is not only a challenge but also new possibilites :) I like learning new stuff and I'm looking for new areas to develop and hoping to work with like-minded people.
                     </p>
                 </div>
             </div>
@@ -122,9 +123,70 @@
     </div>
     <!-- End #education -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+ <div id="projects" class="background-alt">
+        <h2 class="heading">ASP.NET Projects</h2>
         <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.gif" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Bulky Book</h3>
+                        <p>
+							My first big project, I did it with the course "Introduction to ASP.NET Core MVC" by Bhrugen Patel. After finishing the course I added a lot of features myself, such as DTOs, AutoMapper, Logging, Monitoring. And of course some tests.
+                        <a href="https://github.com/soleshhaker/.net-tutorial-project">Show project</a>
+                        </p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+              <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Microservices</h3>
+                        <p>
+							Second project, I also did it with the course ".NET Microservices – Full Course" by Les Jackson. I learned docker, when to use microservices, and how do they work.
+                        </p>
+                        <a href="https://github.com/soleshhaker/microservices">Show project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+				<div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Ophthalmology Salon</h3>
+                        <p>
+                            Simple web API, you can check availabile visit times depending on visit type, schedule a visit, doctors can add additional info for patient to see, or add extra cost for medication etc. Admin can add or modify existing visit any way they want, and delete them.
+                        </p>
+                        <a href="https://github.com/soleshhaker/ophthalmology-salon">Show project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+        </div>
+    </div>
+    <!-- End #projects -->
+	      
+	
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Unity Projects</h2>
+			<p>If you are interested here are some of my old unity related projects :)</p>
+				<a id ="chevronToggle">
+				<span style="cursor: pointer; display: block; margin: 15px auto 0 auto; width: 35px; height: 35px; border-radius: 50%; border: 3px solid #b9bfc4; text-align: center;">
+			
+                <i id="chevron" class="fa fa-chevron-down" aria-hidden="true"></i>
+				</a>
+				</span>
+        <div id="collapseOne" class="container panel-collapse collapse">
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
@@ -134,7 +196,7 @@
                     <div class="project-info">
                         <h3>Platforming game</h3>
                         <p>
-							My first game in which I learned beginnings in Unity and C#, everyday I tried to add new features and learned in practical way.
+							My first game in which I learned basics in Unity and C#, everyday I tried to add new features and learned in practical way.
                         </p>
                         <a href="https://github.com/soleshhaker/platformowka-kulki">Show project</a>
                     </div>
@@ -204,6 +266,7 @@
                 <!-- End .project -->
         </div>
     </div>
+	</div>
     <!-- End #projects -->
 
     <div id="skills">
@@ -258,8 +321,26 @@
     </footer>
     <!-- End footer -->
 
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script>
+$(document).ready(function () {
+  $('#chevronToggle').click(function() {
+    $('#collapseOne').collapse('toggle');
+});
+
+$('#collapseOne').on('show.bs.collapse', function () {
+    $('#chevron').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+});
+
+$('#collapseOne').on('hide.bs.collapse', function () {
+    $('#chevron').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+});
+});
+</script>
 </body>
 
 </html>
